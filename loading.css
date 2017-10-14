@@ -1,0 +1,69 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.loadingBar{
+    width: 650px;
+    height: 30px;
+    background-color: whitesmoke;
+    position: relative;
+    margin:0;
+    left: 25%;
+    top: 50%;
+    border-radius: 10%;
+}
+.loadingColor{
+    width: 650px;
+    height: 30px;
+    background-color: green;
+    position: relative;
+    margin:0;    
+    border-radius: 10%;
+    transition: all 1s;
+    animation: 10s loadingFill 1;
+    animation-timing-function: linear;
+}
+.loadingLine{   
+    width: 0px;
+    height: 30px;
+    background-color: purple;
+    transition: all 1s;
+    position: inherit;
+    border-radius: 10%;
+    animation: 3s loadingLineMove 4;
+    animation-timing-function: linear;
+}
+@keyframes loadingFill {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 650px;
+    }
+}
+@keyframes loadingLineMove {
+    0% {
+        left:0%;
+        width: 5px;
+    }
+    20% {
+        left:20%;
+        width: 5px;
+    }
+    40% {
+        left:40%;
+        width: 5px;
+    }
+    60% {    
+        left:60%;
+        width: 5px;
+    }   
+    80% {
+        left:80%;
+        width: 5px;        
+    }
+    98% {
+        left:98%;
+        width: 5px;        
+    }
+}
